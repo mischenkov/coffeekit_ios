@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A167AC6E19D365A600DFB6CE /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = A167AC6D19D365A600DFB6CE /* Venue.m */; };
+		A167AC7119D3684100DFB6CE /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = A167AC7019D3684100DFB6CE /* Location.m */; };
 		A1BC6BD819D2430500BD440B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BC6BD719D2430500BD440B /* main.m */; };
 		A1BC6BDB19D2430500BD440B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BC6BDA19D2430500BD440B /* AppDelegate.m */; };
 		A1BC6BDE19D2430500BD440B /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BC6BDD19D2430500BD440B /* MasterViewController.m */; };
@@ -34,6 +35,8 @@
 		A167AC6A19D355E600DFB6CE /* libPods-RestKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-RestKit.a"; path = "Pods/build/Debug-iphoneos/libPods-RestKit.a"; sourceTree = "<group>"; };
 		A167AC6C19D365A600DFB6CE /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
 		A167AC6D19D365A600DFB6CE /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
+		A167AC6F19D3684100DFB6CE /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		A167AC7019D3684100DFB6CE /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		A1BC6BD219D2430500BD440B /* CoffeeKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1BC6BD619D2430500BD440B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1BC6BD719D2430500BD440B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -109,6 +112,8 @@
 				A167AC6C19D365A600DFB6CE /* Venue.h */,
 				A167AC6D19D365A600DFB6CE /* Venue.m */,
 				A1BC6BE219D2430500BD440B /* Main.storyboard */,
+				A167AC6F19D3684100DFB6CE /* Location.h */,
+				A167AC7019D3684100DFB6CE /* Location.m */,
 				A1BC6BE519D2430500BD440B /* Images.xcassets */,
 				A1BC6BE719D2430500BD440B /* LaunchScreen.xib */,
 				A1BC6BD519D2430500BD440B /* Supporting Files */,
@@ -278,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1BC6BDB19D2430500BD440B /* AppDelegate.m in Sources */,
+				A167AC7119D3684100DFB6CE /* Location.m in Sources */,
 				A167AC6E19D365A600DFB6CE /* Venue.m in Sources */,
 				A1BC6BDE19D2430500BD440B /* MasterViewController.m in Sources */,
 				A1BC6BD819D2430500BD440B /* main.m in Sources */,

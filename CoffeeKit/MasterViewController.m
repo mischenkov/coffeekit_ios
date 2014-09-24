@@ -8,10 +8,12 @@
 
 #import "MasterViewController.h"
 #import "Venue.h"
+#import "Location.h"
 
 #import "AFNetworking.h"
 #import "RKObjectManager.h"
 #import "RKResponseDescriptor.h"
+#import "RKRelationshipMapping.h"
 
 #define kCLIENTID @"ZEV4UK1J4T4RWCN4TOIMNZIMUC1EQBC1EDSRSGL1MLTT1RXD"
 #define kCLIENTSECRET @"5EYW1UAL1NAEQINRIMPXUKM4C5JST4CPKT3AQ50FW2VFY5KV"
@@ -55,6 +57,7 @@
 
 	Venue *venue = _venues[indexPath.row];
 	cell.textLabel.text = venue.name;
+	cell.detailTextLabel.text = [NSString stringWithFormat:@"%.0fm", venue.location.distance.floatValue];
 
 	return cell;
 }
@@ -78,6 +81,13 @@
 	RKObjectMapping *venueMapping = [RKObjectMapping mappingForClass:[Venue class]];
 	[venueMapping addAttributeMappingsFromArray:@[@"name"]];
 	
+	// define location object mapping
+	RKObjectMapping *locationMapping = [RKObjectMapping mappingForClass:[Location class]];
+	[locationMapping addAttributeMappingsFromArray:@[@"address",@"city", @"country", @"crossStreet", @"postalCode", @"state", @"distance", @"lat", @"lng"]];
+
+	// define relationship mapping
+	[venueMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"location" toKeyPath:@"location" withMapping:locationMapping]];
+	
 	// register mappings with the provider using a response descriptor
 	RKResponseDescriptor *responseDescriptor =
 	[RKResponseDescriptor responseDescriptorWithMapping:venueMapping
@@ -86,6 +96,7 @@
 												keyPath:@"response.venues"
 											statusCodes:[NSIndexSet indexSetWithIndex:200]];
 	[objectManager addResponseDescriptor:responseDescriptor];
+	
 }
 
 - (void)loadVenues
