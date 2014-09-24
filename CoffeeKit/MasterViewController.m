@@ -9,6 +9,7 @@
 #import "MasterViewController.h"
 #import "Venue.h"
 #import "Location.h"
+#import "Stats.h"
 
 #import "AFNetworking.h"
 #import "RKObjectManager.h"
@@ -18,10 +19,12 @@
 #define kCLIENTID @"ZEV4UK1J4T4RWCN4TOIMNZIMUC1EQBC1EDSRSGL1MLTT1RXD"
 #define kCLIENTSECRET @"5EYW1UAL1NAEQINRIMPXUKM4C5JST4CPKT3AQ50FW2VFY5KV"
 
+@implementation VenueCell
+
+@end
+
 @interface MasterViewController ()
-
 @property (nonatomic, strong) NSArray *venues;
-
 @end
 
 @implementation MasterViewController
@@ -53,12 +56,13 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+	VenueCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
 	Venue *venue = _venues[indexPath.row];
-	cell.textLabel.text = venue.name;
-	cell.detailTextLabel.text = [NSString stringWithFormat:@"%.0fm", venue.location.distance.floatValue];
-
+	cell.nameLabel.text = venue.name;
+	cell.distanceLabel.text = [NSString stringWithFormat:@"%.0fm", venue.location.distance.floatValue];
+	cell.checkinsLabel.text = [NSString stringWithFormat:@"%d checkins", venue.stats.checkins.integerValue];
+	
 	return cell;
 }
 
@@ -87,6 +91,12 @@
 
 	// define relationship mapping
 	[venueMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"location" toKeyPath:@"location" withMapping:locationMapping]];
+	
+	// define stats mapping
+	RKObjectMapping *statsMapping = [RKObjectMapping mappingForClass:[Stats class]];
+	[statsMapping addAttributeMappingsFromDictionary:@{@"checkinsCount":@"checkins", @"tipsCount":@"tips", @"usersCount":@"users"}];
+	
+	[venueMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"stats" toKeyPath:@"stats" withMapping:statsMapping]];
 	
 	// register mappings with the provider using a response descriptor
 	RKResponseDescriptor *responseDescriptor =

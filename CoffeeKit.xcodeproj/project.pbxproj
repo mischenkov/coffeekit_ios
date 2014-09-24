@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A167AC6E19D365A600DFB6CE /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = A167AC6D19D365A600DFB6CE /* Venue.m */; };
 		A167AC7119D3684100DFB6CE /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = A167AC7019D3684100DFB6CE /* Location.m */; };
+		A167AC7419D372DE00DFB6CE /* Stats.m in Sources */ = {isa = PBXBuildFile; fileRef = A167AC7319D372DE00DFB6CE /* Stats.m */; };
 		A1BC6BD819D2430500BD440B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BC6BD719D2430500BD440B /* main.m */; };
 		A1BC6BDB19D2430500BD440B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BC6BDA19D2430500BD440B /* AppDelegate.m */; };
 		A1BC6BDE19D2430500BD440B /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BC6BDD19D2430500BD440B /* MasterViewController.m */; };
@@ -37,6 +38,8 @@
 		A167AC6D19D365A600DFB6CE /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
 		A167AC6F19D3684100DFB6CE /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		A167AC7019D3684100DFB6CE /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		A167AC7219D372DE00DFB6CE /* Stats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stats.h; sourceTree = "<group>"; };
+		A167AC7319D372DE00DFB6CE /* Stats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stats.m; sourceTree = "<group>"; };
 		A1BC6BD219D2430500BD440B /* CoffeeKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1BC6BD619D2430500BD440B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1BC6BD719D2430500BD440B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -112,6 +115,8 @@
 				A167AC6C19D365A600DFB6CE /* Venue.h */,
 				A167AC6D19D365A600DFB6CE /* Venue.m */,
 				A1BC6BE219D2430500BD440B /* Main.storyboard */,
+				A167AC7219D372DE00DFB6CE /* Stats.h */,
+				A167AC7319D372DE00DFB6CE /* Stats.m */,
 				A167AC6F19D3684100DFB6CE /* Location.h */,
 				A167AC7019D3684100DFB6CE /* Location.m */,
 				A1BC6BE519D2430500BD440B /* Images.xcassets */,
@@ -285,6 +290,7 @@
 				A1BC6BDB19D2430500BD440B /* AppDelegate.m in Sources */,
 				A167AC7119D3684100DFB6CE /* Location.m in Sources */,
 				A167AC6E19D365A600DFB6CE /* Venue.m in Sources */,
+				A167AC7419D372DE00DFB6CE /* Stats.m in Sources */,
 				A1BC6BDE19D2430500BD440B /* MasterViewController.m in Sources */,
 				A1BC6BD819D2430500BD440B /* main.m in Sources */,
 			);

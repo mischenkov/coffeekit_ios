@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface MasterViewController : UITableViewController
+@end
 
+@interface VenueCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *checkinsLabel;
 @end
 
