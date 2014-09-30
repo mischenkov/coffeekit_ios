@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A361c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Master-->
@@ -35,25 +37,45 @@
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epS-eL-RZp">
-                                            <rect key="frame" x="40" y="23" width="253" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epS-eL-RZp">
+                                            <rect key="frame" x="18" y="20" width="47" height="23"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="checkins" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgk-NW-h2X">
-                                            <rect key="frame" x="369" y="36" width="179" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="checkins" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgk-NW-h2X">
+                                            <rect key="frame" x="522" y="32" width="68" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="distance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Mg-sY-pPt">
-                                            <rect key="frame" x="369" y="7" width="177" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="distance" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Mg-sY-pPt">
+                                            <rect key="frame" x="524" y="10" width="66" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="centerY" secondItem="epS-eL-RZp" secondAttribute="centerY" id="7ZN-dv-3Pv"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="pgk-NW-h2X" secondAttribute="bottom" constant="-2" id="Bg1-bC-rSA"/>
+                                        <constraint firstItem="6Mg-sY-pPt" firstAttribute="top" secondItem="d3P-M7-ByW" secondAttribute="top" constant="10" id="F1e-C2-86Z"/>
+                                        <constraint firstAttribute="bottom" secondItem="pgk-NW-h2X" secondAttribute="bottom" constant="10" id="FOh-nL-Gbv"/>
+                                        <constraint firstItem="6Mg-sY-pPt" firstAttribute="top" secondItem="d3P-M7-ByW" secondAttribute="topMargin" constant="-1" id="Hux-3Z-HIx"/>
+                                        <constraint firstAttribute="trailing" secondItem="6Mg-sY-pPt" secondAttribute="trailing" constant="10" id="RHr-rM-rPY"/>
+                                        <constraint firstAttribute="trailing" secondItem="pgk-NW-h2X" secondAttribute="trailing" constant="10" id="RXF-qS-TiL"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="pgk-NW-h2X" secondAttribute="trailing" constant="10" id="Rwc-vu-AYq"/>
+                                        <constraint firstItem="epS-eL-RZp" firstAttribute="leading" secondItem="d3P-M7-ByW" secondAttribute="leadingMargin" constant="10" id="Upk-HK-gUP"/>
+                                        <constraint firstAttribute="trailing" secondItem="6Mg-sY-pPt" secondAttribute="trailing" constant="10" id="pUk-Ex-C9T"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="Hux-3Z-HIx"/>
+                                            <exclude reference="pUk-Ex-C9T"/>
+                                            <exclude reference="Bg1-bC-rSA"/>
+                                            <exclude reference="Rwc-vu-AYq"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
